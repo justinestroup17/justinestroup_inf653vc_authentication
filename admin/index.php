@@ -1,6 +1,7 @@
 <?php
     // Model
     require('../model/database.php');
+    require('../model/admin_db.php');
     require('../model/vehicle_db.php');
     require('../model/type_db.php');
     require('../model/class_db.php');
@@ -37,6 +38,11 @@
     $model = filter_input(INPUT_POST, 'model', FILTER_SANITIZE_STRING);
     $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_INT);
 
+    // Receive 3 new POST parameters for authentication
+    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+    $confirm_password = filter_input(INPUT_POST, 'confirm', FILTER_SANITIZE_STRING);
+
     $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
     if (!$action) {
         $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
@@ -62,3 +68,10 @@
         $action === 'add_vehicle' ||
         $action === 'delete_vehicle' ||
         $action === 'list_vehicles') include('controllers/vehicles.php');
+
+    // Route to the new subcontroller (admin.php) for 5 actions:
+    if ($action === 'login' ||
+        $action === 'show_login' ||
+        $action === 'register' ||
+        $action === 'show_register' ||
+        $action === 'logout') include('controllers/admin.php');
