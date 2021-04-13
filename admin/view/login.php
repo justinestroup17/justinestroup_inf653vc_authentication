@@ -1,5 +1,7 @@
 <?php
-//if($login_message)
+if(isset($login_message)) {
+    echo($login_message);
+}
 ?>
 <form action="." method="GET" class="register_form">
     <input type="hidden" name="action" value="login">
