@@ -7,7 +7,9 @@
 }
 
 /*=== Base Elements ===*/
-
+.my-errors {
+  color: red;
+}
 html {
   font-size: 18px;
   background-color: whitesmoke;

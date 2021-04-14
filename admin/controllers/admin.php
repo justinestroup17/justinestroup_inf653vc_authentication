@@ -20,14 +20,16 @@ switch($action) {
             header("Location: .?action=list_vehicles");
         } else {
             $login_message = 'Incorrect Login / Login Required';
-            //echo('You put '.$username .' as the username and '.$password.' as the password');
             include('view/login.php');
         }
         break;
     case 'register':
         include('util/valid_register.php');
-        valid_registration($username, $password, $confirm_password);
-        if(!empty($errors)) {
+        $errors_array = valid_registration($username, $password, $confirm_password);
+        if(!empty($errors_array)) {
+            foreach ($errors_array as $key => $value) {
+                echo "<p style='color:red;'>".$value."</p><br>";
+            }
             include('view/register.php');
         } else {
             add_admin($username, $password);

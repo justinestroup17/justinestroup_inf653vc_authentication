@@ -34,6 +34,5 @@
             if (!passwords_match($password, $confirm_password)) {
             array_push($errors, "The passwords you entered did not match.");
         }
-
         return $errors;
     }
