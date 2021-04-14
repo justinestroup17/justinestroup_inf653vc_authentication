@@ -5,7 +5,7 @@ include('header.php');
 // Display errors from $errors array if they exist
 valid_registration($username, $password, $confirm_password);
 ?>
-<form action="." method="GET" class="register_form">
+<form action="." method="POST" class="register_form">
     <input type="hidden" name="action" value="register">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" maxlength="50" required>

@@ -4,7 +4,7 @@ switch($action) {
         $_SESSION = array();    // Clear all session data from memory
         session_destroy();      // Clean up the session ID 
         $login_message = 'Logout successful';
-        include('/view/login.php');
+        include('view/login.php');
         break;
     case 'show_register':
         include('view/register.php');

@@ -14,7 +14,7 @@ if(isset($login_message)) {
 </head>
 <body>
 <h1>Zippy's Autos<br/>Login Page</h1>
-<form action="." method="GET" class="register_form">
+<form action="." method="POST" class="register_form">
     <input type="hidden" name="action" value="login">
     <label for="username">Username: </label>
     <input type="text" id="username" name="username" maxlength="50" required><br>

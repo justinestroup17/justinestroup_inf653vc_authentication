@@ -1,4 +1,5 @@
 <?php
+    session_start();
     // Model
     require('../model/database.php');
     require('../model/admin_db.php');
@@ -41,7 +42,7 @@
     // Receive 3 new POST parameters for authentication
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-    $confirm_password = filter_input(INPUT_POST, 'confirm', FILTER_SANITIZE_STRING);
+    $confirm_password = filter_input(INPUT_POST, 'confirm_password', FILTER_SANITIZE_STRING);
 
     $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
     if (!$action) {

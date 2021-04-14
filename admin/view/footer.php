@@ -24,6 +24,10 @@
     <?php if ($action !== 'show_register') { ?>
     <p><a href=".?action=show_register">Register</a></p>
     <?php } ?>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <?php if ($action !== 'logout') { ?>
+    <p><a href=".?action=logout">Logout</a></p>
+    <?php } ?>
     
 </div>
 
