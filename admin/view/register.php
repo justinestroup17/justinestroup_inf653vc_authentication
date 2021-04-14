@@ -1,6 +1,6 @@
 <?php
-require_once('C:\xampp\htdocs\justine_stroup_inf653vc_authentication\model\admin_db.php');
-require_once('C:\xampp\htdocs\justine_stroup_inf653vc_authentication\admin\util\valid_register.php');
+require_once('../model/admin_db.php');
+require_once('../admin/util/valid_register.php');
 include('header.php');
 // Display errors from $errors array if they exist
 valid_registration($username, $password, $confirm_password);
