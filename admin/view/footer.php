@@ -22,9 +22,9 @@
     <p><a href=".?action=list_classes">View/Edit Vehicle Classes</a></p>
     <?php } ?>
     <?php if ($action !== 'show_register') { ?>
-    <p><a href=".?action=show_register">Register</a></p>
+    <p><a href=".?action=show_register">Register New Admin</a></p>
     <?php } ?>
-    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;
     <?php if ($action !== 'logout') { ?>
     <p><a href=".?action=logout">Logout</a></p>
     <?php } ?>

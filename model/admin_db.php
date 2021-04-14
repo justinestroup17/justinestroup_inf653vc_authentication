@@ -8,7 +8,7 @@ function add_admin($username, $password) {
                 (:username, :password)';
     $statement = $db->prepare($query);
     $statement->bindValue(':username', $username);
-    $statement->bindValue(':password', $password);
+    $statement->bindValue(':password', $hash);
     $statement->execute();
     $statement->closeCursor();
 }

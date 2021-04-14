@@ -20,6 +20,7 @@ switch($action) {
             header("Location: .?action=list_vehicles");
         } else {
             $login_message = 'Incorrect Login / Login Required';
+            //echo('You put '.$username .' as the username and '.$password.' as the password');
             include('view/login.php');
         }
         break;
