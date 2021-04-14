@@ -10,7 +10,7 @@ switch($action) {
         include('view/register.php');
         break;
     case 'show_login':
-        include('/view/login.php');
+        include('view/login.php');
         break;
     case 'login':
         $username = filter_input(INPUT_POST, 'username');
@@ -20,14 +20,14 @@ switch($action) {
             header("Location: .?action=list_vehicles");
         } else {
             $login_message = 'Incorrect Login / Login Required';
-            include('/view/login.php');
+            include('view/login.php');
         }
         break;
     case 'register':
         include('util/valid_register.php');
         valid_registration($username, $password, $confirm_password);
         if(!empty($errors)) {
-            include('/view/register.php');
+            include('view/register.php');
         } else {
             add_admin($username, $password);
             $_SESSION['is_valid_admin'] = true;

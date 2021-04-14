@@ -87,7 +87,9 @@ footer p {
 }
 
 /*==== Utility Classes ====*/
-
+.admin-error {
+  color: red;
+}
 .button {
   border-radius: 10px;
   text-shadow: 2px 2px 2px #000;
@@ -117,7 +119,6 @@ footer p {
 }
 
 /*==== Nav Classes ====*/
-
 .dropmenus {
   display: flex;
   flex-direction: column;
